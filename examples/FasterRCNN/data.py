@@ -399,7 +399,7 @@ def get_eval_dataflow():
 if __name__ == '__main__':
     import os
     from tensorpack.dataflow import PrintData
-    cfg.DATA.BASEDIR = os.path.expanduser('~/data/coco')
+    cfg.DATA.BASEDIR = './coco'
     ds = get_train_dataflow()
     ds = PrintData(ds, 100)
     TestDataSpeed(ds, 50000).start()
